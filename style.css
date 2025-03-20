@@ -52,6 +52,7 @@ ul.card_list{
     position: relative;
     /* scrollbar-color: #c1c1c1 transparent ; */
     scroll-snap-type: inline mandatory;
+
 }
 
 

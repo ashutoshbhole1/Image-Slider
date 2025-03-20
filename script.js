@@ -1,55 +1,25 @@
-console.log("Radhe Radhe");
+// console.log("Radhe Radhe");
 
 let left = document.querySelector('.lft_arrow');
 let right = document.querySelector('.rgt_arrow');
-let card = document.querySelectorAll('.card_item');
-let images = document.querySelectorAll('.card_image');
-let slideNo = 1;
+let cardWrapper = document.querySelector('.card_list'); // The scrolling container
+let card = document.querySelector('.card_item')
 
-// code
+let cardWidth = card.offsetWidth + 30; // Card width + margin
 
-right.addEventListener("click", () => {
-    console.log("radha");
-
-    if (slideNo < images.length) {
-        // card.forEach((box) => {
-        //     box.style.transform = `translateX(-${slideNo * 10}rem)`;
-        //     slideNo++;
-            card.style.transform = `translateX(-${slideNo * 10}rem)`;
-            // slideNo++;
-        // });
-    }
-
-    else {
-        // slideNo = 1;
-    }
+right.addEventListener("click",()=>{
+    cardWrapper.scrollBy({
+        left:cardWidth,
+        behavior:"smooth"
+    })
 });
 
-
-
-
-
-
-// left.addEventListener("click", () => {
-//     console.log("kanha");
-
-//     if (slideNo < images.length) {
-
-//         card.forEach((box) => {
-//             box.style.transform = `translateX(${slideNo * 15}rem)`;
-//             slideNo++;
-//         });
-//     } else {
-//         slideNo = 1;
-//     }
-
-
-// });
-
-
-
-
-
+left.addEventListener("click",()=>{
+    cardWrapper.scrollBy({
+        left:cardWidth,
+        behavior:"smooth"
+    })
+})
 
 
 
