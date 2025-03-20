@@ -7,17 +7,17 @@ let card = document.querySelector('.card_item')
 
 let cardWidth = card.offsetWidth + 30; // Card width + margin
 
-right.addEventListener("click",()=>{
+right.addEventListener("click", () => {
     cardWrapper.scrollBy({
-        left:cardWidth,
-        behavior:"smooth"
+        left: cardWidth,
+        behavior: "smooth"
     })
 });
 
-left.addEventListener("click",()=>{
+left.addEventListener("click", () => {
     cardWrapper.scrollBy({
-        left:cardWidth,
-        behavior:"smooth"
+        left: -cardWidth,
+        behavior: "smooth"
     })
 })
 
