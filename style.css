@@ -53,6 +53,8 @@ ul.card_list{
     /* scrollbar-color: #c1c1c1 transparent ; */
     scroll-snap-type: inline mandatory;
 
+    cursor: grab;
+
 }
 
 
@@ -65,6 +67,8 @@ ul.card_list{
  z-index: 2;
  box-shadow: 0 10px 50px #ffe9e9;
  transition: .3s ease-in-out;
+ user-select: none;
+
 }
 
 
@@ -76,6 +80,7 @@ ul.card_list{
     flex-direction: column;
     gap: .5rem;
     user-select: none;
+    cursor: grab;
 }
 
 .card_list .card_item a img{
