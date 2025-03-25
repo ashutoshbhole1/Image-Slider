@@ -2,8 +2,7 @@
  
 # 📸 Interactive Image Slider with Mouse Drag & Arrows
 
-![Image Slider Preview](https://ashutoshbhole1.github.io/Image-Slider/demo-image.png)  
-*(Replace "demo-image.png" with an actual screenshot of your project)*  
+![Image Slider Preview](https://ashutoshbhole1.github.io/Image-Slider/Img/final-slider.png)  
 
 🔗 **Live Demo:** [View Here](https://ashutoshbhole1.github.io/Image-Slider/)  
 📌 **GitHub Repo:** [View on GitHub](https://github.com/ashutoshbhole1/Image-Slider)  
