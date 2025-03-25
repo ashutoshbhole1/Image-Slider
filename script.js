@@ -7,35 +7,31 @@ let card = document.querySelector('.card_item')
 let card_Link = document.querySelectorAll(".card_link")
 
 
-let pressed = false;
-let startX;
-let x;
+let pressed = false;   // Tracks if the mouse is pressed
+let startX;            // Stores the initial mouse X position
+let x;                 // Stores the current X position
+let scrollLeftStart;   // Stores the initial scroll position of the container
 
 cardWrapper.addEventListener("mousedown", (e) => {
     pressed = true;
-    startX = e.offsetX - card.offsetLeft;
-
-    // let x = e.offsetX + "px";  //give the x and y cordinates wrt to the ul (parent) container 
-    // let y = e.offsetY + "px";
-    // console.log(x, y);
-
+    startX = e.pageX - cardWrapper.offsetLeft;
+    scrollLeftStart = cardWrapper.scrollLeft;
 });
 
-window.addEventListener("mouseup",()=>{
+cardWrapper.addEventListener("mouseup", (e) => {
     pressed = false;
 });
 
-cardWrapper.addEventListener("mousemove",(e)=>{
-    if(!pressed) return;
+cardWrapper.addEventListener("mousemove", (e) => {
+    if (!pressed) return; // If mouse is not pressed, do nothing
+    e.preventDefault(); // Prevents text selection while dragging
 
-    e.preventDefault();
+    let moveX = e.pageX - cardWrapper.offsetLeft; // Get new X position
+    let walk = (moveX - startX) * 2; // Calculate how far to scroll (multiplied for smoothness)
 
-    x = e.offsetX;
-    cardWrapper.scrollLeft = `${x-startX}px`
-    // card.style.left = `${x-startX}px`
-
-
+    cardWrapper.scrollLeft = scrollLeftStart - walk;
 });
+
 
 
 // mouse down grab

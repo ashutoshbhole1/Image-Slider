@@ -53,7 +53,7 @@ ul.card_list{
     /* scrollbar-color: #c1c1c1 transparent ; */
     scroll-snap-type: inline mandatory;
 
-    cursor: grab;
+    /* cursor: grab; */
 
 }
 
@@ -80,7 +80,9 @@ ul.card_list{
     flex-direction: column;
     gap: .5rem;
     user-select: none;
-    cursor: grab;
+    /* cursor: grab; */
+    /* pointer-events: none; */
+    
 }
 
 .card_list .card_item a img{
@@ -113,11 +115,16 @@ ul.card_list{
     border: 1px solid rgb(158, 158, 158);
     color: #474747;
     /* color: #7f7f7f; */
-    transform: rotate(-45deg);
+    /* transform: rotate(-45deg); */
     box-shadow: 0 10px 50px #ffebeb;
     cursor: pointer;
     transition: .5s ease;
 }
+
+.card_list .card_item a button.card_button i{
+    font-size: 1.5rem;
+}
+
 .card_list .card_item a button.card_button:hover{
     background: #ff2828;
     border: 1px solid #ffffff;
