@@ -205,11 +205,7 @@ ul.card_list{
 }
 .card_list .card_item a .badge{
    background: #ffe4e4;
-   padding: .2rem .65rem;
-   border-radius: 2rem;
-   letter-spacing: .5px;
-   margin-top: .5rem;
-   font-weight: 500;
+   padding: .28rem .65rem;
    font-size: .7rem;
 }
 
